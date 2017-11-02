@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   height="50"
+   width="49.999996"
+   id="svg896"
+   viewBox="0 0 49.999997 50"
+   y="0px"
+   x="0px"
+   version="1.1">
+  <metadata
+     id="metadata902">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs900" />
+  <g
+     transform="matrix(-1,0,0,1,49.999997,0)"
+     id="g1016">
+    <path
+       style="opacity:1;fill:#000000;fill-opacity:0.6;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 0,0 V 25 50 H 25 A 25,25 0 0 0 49.999997,25 25,25 0 0 0 25,0 Z"
+       id="path906" />
+    <g
+       transform="matrix(-1,0,0,1,48.999996,-1003.3622)"
+       id="g890"
+       style="fill:#ffff00;fill-opacity:1">
+      <path
+         d="m 44.999995,1028.357 c -0.028,-0.715 -0.3223,-1.5414 -0.8125,-2.0626 l -16,-17.0008 c -1.0842,-0.9743 -3.1632,-1.3765 -4.375,-0.25 -1.1936,1.1095 -1.1581,3.2613 0.031,4.3752 l 11.25,11.9381 H 5.9999953 c -1.6568,0 -3,1.3432 -3,3.0001 0,1.6569 1.3432,3.0001 3,3.0001 H 35.093495 l -11.25,11.9381 c -1.0237,1.0255 -1.2129,3.253 -0.031,4.3752 1.1816,1.1221 3.3353,0.7636 4.375,-0.2501 l 16,-17.0007 c 0.5475,-0.5818 0.8143,-1.2644 0.8125,-2.0626 z"
+         style="color:#000000;text-indent:0;text-transform:none;direction:ltr;baseline-shift:baseline;display:inline;overflow:visible;visibility:visible;fill:#ffff00;fill-opacity:1;fill-rule:nonzero;stroke:none;enable-background:accumulate"
+         marker="none"
+         visibility="visible"
+         display="inline"
+         overflow="visible"
+         id="path888" />
+    </g>
+  </g>
+</svg>

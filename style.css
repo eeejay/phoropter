@@ -1,0 +1,132 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin:0;
+  text-align: center;
+  line-height: 0;
+  background-color: #000;
+}
+
+.defs-only {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+header {
+  white-space: nowrap;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+h1 {
+  background-color: rgba(0,0,0,0.6);
+  padding: 15px 0;
+  color: yellow;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  font-size: 2rem;
+  height: 3rem;
+  line-height: 3rem;
+  border-radius: 0 0 4rem 4rem;
+  display: inline-block;
+  transition: visibility 1s linear;
+}
+
+h1 > a, h1 > a:visited {
+  text-decoration: none;
+  color: yellow;
+}
+
+h1:not(:target) {
+  visibility: hidden;
+}
+
+#viewport {
+  position: relative;
+  display: inline-block;
+  text-align: initial;
+  line-height: 0;
+  height: 100%;
+}
+
+#viewport > canvas {
+  object-fit: contain;
+  height: 100%;
+  max-width: 100vw;
+  vertical-align: top;
+}
+
+#overlay {
+  opacity: 0;
+  visibility: hidden;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: opacity 0.5s ease 1s;
+}
+
+#overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+#next, #previous {
+  width: 100px;
+  height: 100px;
+}
+
+#sliders {
+  align-self: center;
+  width: 50%;
+  position: relative;
+}
+
+#sliders > input {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(100px);
+  transition: transform 0.5s ease, visibility 0.5s;
+}
+
+#sliders > input.show {
+  visibility: visible;
+  transform: translateY(0);
+}
+
+input[disabled] {
+  opacity: 0.5;
+}
+
+#bottom {
+  align-items: flex-end;
+  overflow-y: hidden;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media all and (display-mode: fullscreen) {
+  #fullscreen {
+    visibility: hidden;
+  }
+}
