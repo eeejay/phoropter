@@ -45,18 +45,15 @@ class FilteredView {
   snapshot() {
     var canvas = document.createElement('canvas');
     canvas.width = this.canvas.width * 2;
-    canvas.height = this.canvas.height;
+    canvas.height = this.canvas.height + 50;
     var ctx = canvas.getContext('2d');
-    ctx.drawImage(this.canvas, this.canvas.width, 0, this.canvas.width, this.canvas.height);
-    ctx.drawImage(this.video, 0, 0, this.canvas.width, this.canvas.height);
+    ctx.drawImage(this.canvas, this.canvas.width, 50, this.canvas.width, this.canvas.height);
+    ctx.drawImage(this.video, 0, 50, this.canvas.width, this.canvas.height);
     ctx.font = '36px serif';
     ctx.fillStyle = 'yellow';
 
-    ctx.fillText("Typical", 10, 50);
-    ctx.strokeText("Typical", 10, 50);
-
-    ctx.fillText(this.filtersLabel, this.canvas.width + 10, 50);
-    ctx.strokeText(this.filtersLabel, this.canvas.width + 10, 50);
+    ctx.fillText("Typical", 10, 40);
+    ctx.fillText(this.filtersLabel, this.canvas.width + 10, 40);
 
     return new Promise(resolve => {
       canvas.toBlob(resolve, "image/jpeg", 0.85);
