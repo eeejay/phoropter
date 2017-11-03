@@ -118,11 +118,10 @@ function init() {
     location.hash = FILTERS[--index].id;
   });
 
-  let camera = document.getElementById("camera");
   camera.addEventListener("click", evt => {
-    console.log(evt);
-    camera.href = filteredView.snapshot();
-    camera.download = `${getCurrentFilter()}.jpg`;
+    filteredView.snapshot().then(blob => {
+      saveAs(blob, `${getCurrentFilter()}.jpg`);
+    });
   }, false);
 }
 

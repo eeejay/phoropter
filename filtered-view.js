@@ -58,6 +58,8 @@ class FilteredView {
     ctx.fillText(this.filtersLabel, this.canvas.width + 10, 50);
     ctx.strokeText(this.filtersLabel, this.canvas.width + 10, 50);
 
-    return canvas.toDataURL('image/jpeg');
+    return new Promise(resolve => {
+      canvas.toBlob(resolve, "image/jpeg", 0.85);
+    });
   }
 }
