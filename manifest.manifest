@@ -1,6 +1,6 @@
 {
-  "name": "Vision Simulator",
-  "short_name": "Vision Simulator",
+  "name": "Phoropter Vision Simulator",
+  "short_name": "Phoropter",
   "start_url": ".",
   "display": "fullscreen",
   "background_color": "#000",
@@ -18,5 +18,5 @@
     "sizes": "192x192",
     "type": "image/png"
   }],
-  "scope": "/vision-simulator/"
+  "scope": "/phoropter/"
 }
