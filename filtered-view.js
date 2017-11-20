@@ -9,6 +9,21 @@ class FilteredView {
     }, false);
 
     this.getVideoStream();
+
+    document.addEventListener("visibilitychange", () => {
+      switch (document.visibilityState) {
+        case "hidden":
+          this.suspended = true;
+          if (this.stream && this.stream.getVideoTracks().length) {
+            this.stream.getVideoTracks()[0].stop();
+          }
+          break;
+        case "visible":
+          this.suspended = false;
+          this.getVideoStream();
+          break;
+      }
+    });
   }
 
   setFilters(filters, label) {
@@ -35,7 +50,9 @@ class FilteredView {
       this.canvas[filter].apply(this.canvas, args);
     }
     this.canvas.update();
-    requestAnimationFrame(this.canvasDraw.bind(this));
+    if (!this.suspended) {
+      requestAnimationFrame(this.canvasDraw.bind(this));
+    }
   }
 
   initVideo() {
