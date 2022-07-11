@@ -21,8 +21,7 @@ body {
 
 header {
   white-space: nowrap;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
+  position: relative;
 }
 
 h1 {
@@ -36,8 +35,9 @@ h1 {
   height: 3rem;
   line-height: 3rem;
   border-radius: 0 0 4rem 4rem;
-  display: inline-block;
-  transition: visibility 1s linear;
+  display: block;
+  position: absolute;
+  transition: visibility .5s linear, transform .25s linear .25s;
 }
 
 h1 > a, h1 > a:visited {
@@ -47,6 +47,8 @@ h1 > a, h1 > a:visited {
 
 h1:not(:target) {
   visibility: hidden;
+  transform: translateY(-100%);
+  transition: visibility .5s linear, transform .25s linear;
 }
 
 #viewport {
