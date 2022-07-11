@@ -38,6 +38,8 @@ class FilteredView {
     } catch (e) {
       console.log(e);
     }
+    this.video.playsInline = true;
+    this.video.autoplay = true;
     this.video.srcObject = this.stream;
     this.video.play();
     this.texture = this.canvas.texture(this.video);
