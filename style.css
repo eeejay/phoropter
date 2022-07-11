@@ -91,8 +91,9 @@ h1:not(:target) {
 
 #sliders {
   align-self: center;
-  width: 50%;
+  width: 100%;
   position: relative;
+  margin: 2rem;
 }
 
 #sliders > input {
@@ -125,8 +126,12 @@ input[disabled] {
   justify-content: space-between;
 }
 
+#fullscreen.not-supported {
+  display: none;
+}
+
 @media all and (display-mode: fullscreen) {
   #fullscreen {
-    visibility: hidden;
+    display: none;
   }
 }

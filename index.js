@@ -99,7 +99,11 @@ function init() {
     overlay.classList.add("show");
   });
 
-  document.getElementById("fullscreen").addEventListener("click", toggleFullScreen);
+  if (document.documentElement.requestFullscreen) {
+    document.getElementById("fullscreen").addEventListener("click", toggleFullScreen);
+  } else {
+    document.getElementById("fullscreen").classList.add("not-supported");
+  }
 
   document.addEventListener("fullscreenchange", () => {
     let fullscreen = document.getElementById("fullscreen");
