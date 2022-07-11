@@ -1,6 +1,7 @@
 const FILTERS = [
   { id: "typical",
     label: "Typical",
+    link: "#",
     filters: [] },
   { id: "lowacuity",
     label: "Low Acuity",
